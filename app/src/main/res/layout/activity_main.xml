@@ -59,14 +59,16 @@
                 android:insetTop="0dp"
                 android:insetBottom="0dp"
                 android:background="@color/orange"
-                android:onClick="operatorEvent"
-                android:text="()"
+                android:onClick="percentageEvent"
+                android:text="%"
+                android:id="@+id/percentButton"
                 android:gravity="center_vertical|center_horizontal"
                 android:textColor="@color/white"
                 android:textSize="@dimen/calcButtonTextSize" />
 
             <Button
                 android:layout_width="0dp"
+                android:id="@+id/powerButton"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
                 android:insetTop="0dp"

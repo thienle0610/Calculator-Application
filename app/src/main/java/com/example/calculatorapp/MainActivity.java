@@ -25,6 +25,8 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+        text = findViewById(R.id.resultTextView);
     }
 
     public void numberOnclick(View view) {
@@ -117,9 +119,19 @@ public class MainActivity extends AppCompatActivity {
             case R.id.divideButton:
                 op="/";
                 break;
+
+            case R.id.powerButton:
+                op="^";
+                break;
         }
         isCalculated=true;
         beforeIsNumber=false;
+    }
+
+    public void percentageEvent(View view) {
+        double num = Double.parseDouble(text.getText().toString())/100;
+        text.setText(num+"");
+        isNewOp=true;
     }
 
     public void solve() {
@@ -148,6 +160,11 @@ public class MainActivity extends AppCompatActivity {
                     double divide = oldNum / Double.parseDouble(newNumber);
                     result = divide;
                 }
+                break;
+
+            case "^":
+                double pow = Math.pow(oldNum,Double.parseDouble(newNumber));
+                result = pow;
                 break;
         }
 
