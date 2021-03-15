@@ -1,3 +1,5 @@
+// Thien Le, T00640125, COMP 2160
+
 package com.example.calculatorapp;
 
 import androidx.appcompat.app.AppCompatActivity;
